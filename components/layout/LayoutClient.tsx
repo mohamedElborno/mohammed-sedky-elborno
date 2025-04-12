@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { ThemeProvider } from "../providers/theme-provider";
 import { Amiri, Luxurious_Roman, Roboto, Cairo } from "next/font/google";
 import { usePathname } from "next/navigation";
@@ -34,6 +34,10 @@ export default function LayoutClient({
   children: React.ReactNode;
   locale: string;
 }) {
+  useEffect(() => {
+    window.location.reload();
+  }, [locale]);
+
   const pathName = usePathname();
   const isStudioPage = pathName.startsWith("/studio");
   return (
