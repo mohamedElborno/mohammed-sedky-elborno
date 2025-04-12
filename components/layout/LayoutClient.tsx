@@ -36,6 +36,18 @@ export default function LayoutClient({
 }) {
   const pathName = usePathname();
   const isStudioPage = pathName.startsWith("/studio");
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        window.location.reload(); // أو fetch جديد
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
   return (
     <div
       className={`${luxuriousRoman.variable} ${amiri.variable} ${cairo.variable} ${roboto.variable} ${locale === "ar" ? "font-cairo" : "font-roboto tracking-wider"}`}

@@ -2,15 +2,15 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useIntl } from "react-intl";
-import { Separator } from "../ui/separator";
 import Image from "next/image";
 import { Card } from "../ui/card";
+import { LessonsPageType, LessonType } from "@/sanity/types";
 
 export const LessonsPage = ({
   lessonsPage,
   locale,
 }: {
-  lessonsPage: any;
+  lessonsPage: LessonsPageType;
   locale: string;
 }) => {
   const intl = useIntl();
@@ -43,7 +43,7 @@ export const LessonsPage = ({
           />
         </Link>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 md:pt-8">
-          {lessonsPage?.lessons?.map((lesson: any, index: number) => (
+          {lessonsPage?.lessons?.map((lesson: LessonType, index: number) => (
             <Link href={`${lesson?.url}`} key={index}>
               <Card className="overflow-hidden h-full flex flex-col dark:hover:bg-zinc-800 duration-300 hover:bg-zinc-100">
                 <Image

@@ -88,3 +88,19 @@ export type NavparDataType = {
   link: string;
   title: string;
 };
+
+export interface LessonType {
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}
+
+export interface LessonsPageType {
+  _id: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  lessons: LessonType[];
+}
