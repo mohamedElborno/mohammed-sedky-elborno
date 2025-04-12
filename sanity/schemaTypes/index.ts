@@ -6,6 +6,7 @@ import { media } from "./media";
 import { homePage } from "./homePage";
 import { biography } from "./biography";
 import { localeBlock } from "./types/loclaleBlockType";
+import { lessonsPage } from "./lessonsPage";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -16,5 +17,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     books,
     media,
     biography,
+    lessonsPage,
   ],
 };

@@ -11,7 +11,6 @@ export async function getMedia(locale: string) {
   `;
   return client.fetch(query);
 }
-
 export async function getHomePage(locale: string) {
   const query = `
     *[_type == "homePage"][0]{
@@ -73,7 +72,6 @@ export async function getBiography(locale: string) {
   `;
   return client.fetch(query);
 }
-
 export async function getBooks(locale: string) {
   const query = `
     *[_type == "books"] {
@@ -87,21 +85,21 @@ export async function getBooks(locale: string) {
   `;
   return client.fetch(query, { locale });
 }
-
-export async function getBookBySlug(slug: string, locale: string) {
-  return client.fetch(
-    `
-    *[_type == "book" && slug.current == $slug && language == $locale][0] {
+export async function getLessons(locale: string) {
+  const query = `
+    *[_type == "lessonsPage"][0]{
       _id,
-      title,
-      description,
-      content,
-      "coverImage": coverImage.asset->url,
-      category,
-      publishedAt,
-      pageCount
+      "title": title["${locale}"],
+      "description": description["${locale}"],
+      "image": image.asset->url,
+      "url": url,
+      "lessons": lessons[]{
+        "title": title["${locale}"],
+        "description": description["${locale}"],
+        "image": image.asset->url,
+        "url": url
+      }
     }
-  `,
-    { slug, locale }
-  );
+  `;
+  return client.fetch(query, { locale });
 }

@@ -5,6 +5,7 @@ import i18nConfig from "@/i18nConfig";
 import LayoutClient from "@/components/layout/LayoutClient";
 import getIntl from "../intl";
 
+export const revalidate = 3;
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
@@ -17,6 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const intl = await getIntl(locale);
   return {
+    metadataBase: new URL("https://mohammed-sedky-elborno.vercel.app"),
     title: intl.formatMessage({ id: "metadata.title" }),
     description: intl.formatMessage({ id: "metadata.description" }),
     icons: {

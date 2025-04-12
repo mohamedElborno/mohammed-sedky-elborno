@@ -2,7 +2,7 @@ import getIntl from "@/app/intl";
 import { BooksPage } from "@/components/books/BooksPage";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
 import { getBooks } from "@/sanity/queries";
-
+export const revalidate = 2;
 export default async function page({
   params,
 }: {

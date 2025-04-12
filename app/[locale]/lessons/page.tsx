@@ -1,7 +1,7 @@
 import getIntl from "@/app/intl";
-import { BiographyPage } from "@/components/biography/BiographyPage";
+import { LessonsPage } from "@/components/lessons/LessonsPage";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
-import { getBiography } from "@/sanity/queries";
+import { getLessons } from "@/sanity/queries";
 export const revalidate = 2;
 export default async function page({
   params,
@@ -10,10 +10,10 @@ export default async function page({
 }) {
   const { locale } = await params;
   const intl = await getIntl(locale);
-  const biographyPage = await getBiography(locale || "ar");
+  const lessonsPage = await getLessons(locale || "ar");
   return (
     <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
-      <BiographyPage locale={locale} biography={biographyPage} />
+      <LessonsPage lessonsPage={lessonsPage} locale={locale} />
     </ServerIntlProvider>
   );
 }

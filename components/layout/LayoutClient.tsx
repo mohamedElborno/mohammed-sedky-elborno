@@ -35,9 +35,6 @@ export default function LayoutClient({
   locale: string;
 }) {
   const pathName = usePathname();
-  useEffect(() => {
-    window.location.reload();
-  }, [pathName]);
   const isStudioPage = pathName.startsWith("/studio");
   return (
     <div

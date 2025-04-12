@@ -2,7 +2,7 @@ import { getHomePage } from "@/sanity/queries";
 import { HomePage } from "@/components/home/HomePage";
 import getIntl from "../intl";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
-
+export const revalidate = 2;
 export default async function Home({
   params,
 }: {
