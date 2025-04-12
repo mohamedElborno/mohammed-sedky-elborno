@@ -34,11 +34,10 @@ export default function LayoutClient({
   children: React.ReactNode;
   locale: string;
 }) {
+  const pathName = usePathname();
   useEffect(() => {
     window.location.reload();
-  }, [locale]);
-
-  const pathName = usePathname();
+  }, [pathName]);
   const isStudioPage = pathName.startsWith("/studio");
   return (
     <div

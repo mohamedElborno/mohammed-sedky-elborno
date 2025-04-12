@@ -26,6 +26,14 @@ export async function generateMetadata({
       title: intl.formatMessage({ id: "metadata.title" }),
       description: intl.formatMessage({ id: "metadata.description" }),
       siteName: intl.formatMessage({ id: "metadata.title" }),
+      images: [
+        {
+          url: "/metadata.svg",
+          width: 1200,
+          height: 630,
+          alt: intl.formatMessage({ id: "metadata.description" }),
+        },
+      ],
     },
   };
 }
