@@ -1,8 +1,8 @@
 import getIntl from "@/app/intl";
-import { BiographyPage } from "@/components/biography/BiographyPage";
+import { BiographyPage } from "@/components/pages/BiographyPage";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
 import { getBiography } from "@/sanity/queries";
-export const revalidate = 2;
+export const revalidate = 10;
 export default async function page({
   params,
 }: {

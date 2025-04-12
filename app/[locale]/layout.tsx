@@ -4,8 +4,11 @@ import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
 import i18nConfig from "@/i18nConfig";
 import LayoutClient from "@/components/layout/LayoutClient";
 import getIntl from "../intl";
+import { cache } from "react";
 
-export const revalidate = 3;
+const getIntlCached = cache(getIntl);
+export const revalidate = 10;
+export const dynamic = "force-dynamic";
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
@@ -16,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const intl = await getIntl(locale);
+  const intl = await getIntlCached(locale);
   return {
     metadataBase: new URL("https://mohammed-sedky-elborno.vercel.app"),
     title: intl.formatMessage({ id: "metadata.title" }),
@@ -50,12 +53,12 @@ export default async function RootLayout({
   const { locale } = await params;
   const intl = await getIntl(locale);
   return (
-    <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
-      <html lang={locale} suppressHydrationWarning>
-        <body>
+    <html lang={locale} suppressHydrationWarning>
+      <body>
+        <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
           <LayoutClient locale={locale}>{children}</LayoutClient>
-        </body>
-      </html>
-    </ServerIntlProvider>
+        </ServerIntlProvider>
+      </body>
+    </html>
   );
 }

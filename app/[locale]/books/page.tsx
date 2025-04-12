@@ -1,8 +1,8 @@
 import getIntl from "@/app/intl";
-import { BooksPage } from "@/components/books/BooksPage";
+import { BooksPage } from "@/components/pages/BooksPage";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
 import { getBooks } from "@/sanity/queries";
-export const revalidate = 2;
+export const revalidate = 10;
 export default async function page({
   params,
 }: {

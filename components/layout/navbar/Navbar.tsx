@@ -36,16 +36,8 @@ export default function Navbar() {
       title: intl.formatMessage({ id: "navigation.books" }),
     },
     {
-      link: "/lessons",
-      title: intl.formatMessage({ id: "navigation.lessons" }),
-    },
-    {
-      link: "/poems",
-      title: intl.formatMessage({ id: "navigation.poems" }),
-    },
-    {
-      link: "/contact",
-      title: intl.formatMessage({ id: "navigation.contact" }),
+      link: "/media",
+      title: intl.formatMessage({ id: "navigation.media" }),
     },
   ];
 

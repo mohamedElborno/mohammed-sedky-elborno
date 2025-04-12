@@ -1,5 +1,6 @@
 "use client";
-import { IntlProvider, MessageFormatElement } from "react-intl";
+import { IntlProvider, type MessageFormatElement } from "react-intl";
+import type React from "react";
 
 type ServerIntlProviderProps = {
   messages: Record<string, string> | Record<string, MessageFormatElement[]>;
@@ -13,7 +14,15 @@ export default function ServerIntlProvider({
   children,
 }: ServerIntlProviderProps) {
   return (
-    <IntlProvider messages={messages} locale={locale}>
+    <IntlProvider
+      messages={messages}
+      locale={locale}
+      onError={(err) => {
+        if (process.env.NODE_ENV !== "production") {
+          console.warn("IntlProvider error:", err);
+        }
+      }}
+    >
       {children}
     </IntlProvider>
   );

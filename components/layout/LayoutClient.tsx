@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect } from "react";
+import type React from "react";
+import { useEffect } from "react";
 import { ThemeProvider } from "../providers/theme-provider";
 import { Amiri, Luxurious_Roman, Roboto, Cairo } from "next/font/google";
 import { usePathname } from "next/navigation";
@@ -36,16 +37,18 @@ export default function LayoutClient({
 }) {
   const pathName = usePathname();
   const isStudioPage = pathName.startsWith("/studio");
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
-        window.location.reload(); // أو fetch جديد
+        window.location.reload();
       }
     };
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
-    return () =>
+    return () => {
       document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, []);
 
   return (

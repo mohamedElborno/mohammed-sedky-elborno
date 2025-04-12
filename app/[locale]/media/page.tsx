@@ -1,8 +1,8 @@
 import getIntl from "@/app/intl";
-import { LessonsPage } from "@/components/lessons/LessonsPage";
+import { LessonsPage } from "@/components/pages/LessonsPage";
 import ServerIntlProvider from "@/components/providers/ServerIntlProvider";
 import { getLessons } from "@/sanity/queries";
-export const revalidate = 2;
+export const revalidate = 10;
 export default async function page({
   params,
 }: {

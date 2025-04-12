@@ -163,7 +163,7 @@ export const HomePage = ({
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
-                <Link href={`/${locale}/contact`}>
+                <Link href="mailto:elborno.family@gmail.com?subject=استفسار&body=السلام عليكم">
                   <Button className="w-full">
                     {homePageInfo?.contactButton}
                   </Button>
