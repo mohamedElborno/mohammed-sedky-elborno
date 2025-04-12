@@ -1,0 +1,67 @@
+{
+  "metadata.title": "تراث الشيخ",
+  "metadata.description": "أرشيف رقمي لحياة وكتب  ومعلقات شيخ ومعلم ووالد عظيم.",
+
+  "navigation.siteTitle": "تراث الشيخ",
+  "navigation.home": "الرئيسية",
+  "navigation.biography": "السيرة الذاتية",
+  "navigation.books": "الكتب",
+  "navigation.lessons": "الدروس",
+  "navigation.poems": "القصائد",
+  "navigation.contact": "اتصل بنا",
+  "navigation.search": "بحث",
+  "navigation.searchPlaceholder": "ابحث هنا...",
+  "navigation.menu": "القائمة",
+  "navigation.auto": "تلقائي",
+
+  "home.hero.title": "الشيخ محمد صدقي البورنو – سيرة وعلم",
+  "home.hero.description": "أرشيف رقمي لحياة وكتب  ومعلقات شيخ ومعلم ووالد عظيم.",
+  "home.hero.primaryButton": "تعرف على حياته",
+  "home.hero.secondaryButton": "استكشف أعماله",
+  "home.hero.imageAlt": "صورة الشيخ",
+
+  "home.featuredWorks.subtitle": "أعمال الشيخ",
+  "home.featuredWorks.title": "تصفح الأعمال الأكثر تأثيراً",
+  "home.featuredWorks.description": "اكتشف الكتب والقصائد والمقالات الأكثر تأثيراً التي لمست حياة الكثيرين.",
+
+  "home.categories.books.title": "الكتب",
+  "home.categories.books.description": "أعمال شاملة في الفقه الاسلامي.",
+  "home.categories.writings.title": "المقالات",
+  "home.categories.writings.description": "مقالات وتعليقات على القضايا المعاصرة والنصوص التقليدية.",
+  "home.categories.poems.title": "القصائد",
+  "home.categories.poems.description": "شعر روحي وتأملي يعبر عن جوهر الإيمان والتفاني.",
+  "home.categories.viewCollection": "عرض المجموعة",
+
+  "home.about.title": "عن الشيخ",
+  "home.about.description": "كان الشيخ محمد صدقي البورنو (1930 - 2025) عالماً مشهوراً ومؤلفاً ومرشداً روحياً كرس حياته لخدمة العلم والدين.",
+  "home.about.button": "قراءة السيرة الكاملة",
+  "home.about.quote.text": "أدخل اقتباساً بارزاً من الشيخ يعبر عن حكمته ووجهة نظره.",
+  "home.about.quote.author": "الشيخ [الاسم]",
+  "home.about.quote.source": "من [مصدر الاقتباس]",
+
+  "home.contribute.title": "المساهمة في الأرشيف",
+  "home.contribute.description": "ساعدنا في الحفاظ على هذه المجموعة وتوسيعها من خلال مشاركة المواد والترجمات أو الذكريات المتعلقة بالشيخ [الاسم].",
+  "home.contribute.button": "اتصل بنا",
+
+  "footer.siteTitle": "تراث الشيخ",
+  "footer.tagline": "مخصص للحفاظ على ومشاركة حكمة وإسهامات الشيخ [الاسم].",
+  "footer.copyright": "مشروع تراث الشيخ. جميع الحقوق محفوظة.",
+
+  "footer.explore.title": "استكشاف",
+  "footer.explore.home": "الرئيسية",
+  "footer.explore.biography": "السيرة الذاتية",
+  "footer.explore.books": "الكتب",
+  "footer.explore.lessons": "الدروس",
+  "footer.explore.poems": "القصائد",
+
+  "footer.connect.title": "تواصل",
+  "footer.connect.contact": "اتصل بنا",
+
+  "back-to-home": "الرجوع للصفحة الرئيسية",
+  "biography.timeline": "الخط الزمني",
+
+  "books.title": "الكتب",
+  "books.description": "كتب شاملة في الفقه الاسلامي.",
+  "books.bookNotFoundPDF": "لا يوجد نسخة PDF للكتاب",
+  "books.bookRead": "قراءة وتحميل الكتاب"
+}

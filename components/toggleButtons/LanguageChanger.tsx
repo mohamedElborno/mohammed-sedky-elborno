@@ -1,0 +1,63 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { useCurrentLocale } from "next-i18n-router/client";
+import i18nConfig from "@/i18nConfig";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
+import { Languages } from "lucide-react";
+
+export default function LanguageChanger() {
+  const router = useRouter();
+  const currentPathname = usePathname();
+  const currentLocale = useCurrentLocale(i18nConfig);
+
+  const handleChange = (newLocale: string) => {
+    const days = 30;
+    const date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = date.toUTCString();
+    document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+
+    if (currentLocale === i18nConfig.defaultLocale) {
+      router.push("/" + newLocale + currentPathname);
+    } else {
+      router.push(
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+      );
+    }
+
+    router.refresh();
+  };
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild value={currentLocale}>
+        <Button variant="ghost" size="icon">
+          <Languages className="scale-125" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="center">
+        {i18nConfig.locales.map((locale) => (
+          <DropdownMenuItem key={locale} onClick={() => handleChange(locale)}>
+            {locale === "ar" ? "العربية" : ""}
+            {locale === "tr" ? "Türkçe" : ""}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+      {/*       <select onChange={handleChange} value={currentLocale}>
+        {i18nConfig.locales.map((locale) => (
+          <option key={locale} value={locale}>
+            {locale}
+          </option>
+        ))}
+      </select> */}
+    </DropdownMenu>
+  );
+}

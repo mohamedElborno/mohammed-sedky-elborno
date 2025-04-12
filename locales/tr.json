@@ -1,0 +1,67 @@
+{
+  "metadata.title": "Şeyh Mirası",
+  "metadata.description": "Saygıdeğer bir alim ve manevi rehberin hayatı, öğretileri ve edebi katkılarının dijital arşivi.",
+
+  "navigation.siteTitle": "Şeyh Mirası",
+  "navigation.home": "Ana Sayfa",
+  "navigation.biography": "Biyografi",
+  "navigation.books": "Kitaplar",
+  "navigation.lessons": "Dersler",
+  "navigation.poems": "Şiirler",
+  "navigation.contact": "İletişim",
+  "navigation.search": "Ara",
+  "navigation.searchPlaceholder": "Arama...",
+  "navigation.menu": "Menü",
+  "navigation.auto": "otomatik",
+
+  "home.hero.title": "Şeyh [İsim]'in Mirasını Korumak",
+  "home.hero.description": "Saygıdeğer bir alim ve manevi rehberin hayatı, öğretileri ve edebi katkılarının dijital arşivi.",
+  "home.hero.primaryButton": "Hayatını Öğren",
+  "home.hero.secondaryButton": "Eserlerini Keşfet",
+  "home.hero.imageAlt": "Şeyh'in Portresi",
+
+  "home.featuredWorks.subtitle": "Öne Çıkan Eserler",
+  "home.featuredWorks.title": "En Etkili Eserleri Keşfedin",
+  "home.featuredWorks.description": "Sayısız hayata dokunan en etkili kitapları, şiirleri ve yazıları keşfedin.",
+
+  "home.categories.books.title": "Kitaplar",
+  "home.categories.books.description": "Teoloji, maneviyat ve İslam hukuku üzerine kapsamlı eserler.",
+  "home.categories.writings.title": "Yazılar",
+  "home.categories.writings.description": "Çağdaş konular ve geleneksel metinler üzerine denemeler, makaleler ve yorumlar.",
+  "home.categories.poems.title": "Şiirler",
+  "home.categories.poems.description": "İnanç ve adanmışlığın özünü yakalayan manevi ve düşündürücü şiirler.",
+  "home.categories.viewCollection": "Koleksiyonu Görüntüle",
+
+  "home.about.title": "Şeyh Hakkında",
+  "home.about.description": "Şeyh [İsim] (YIL-YIL), hayatını bilgi ve inanç hizmetine adamış tanınmış bir alim, yazar ve manevi rehberdi.",
+  "home.about.button": "Tam Biyografiyi Oku",
+  "home.about.quote.text": "Şeyh'in bilgeliğini ve bakış açısını yansıtan dikkat çekici bir alıntı ekleyin.",
+  "home.about.quote.author": "Şeyh [İsim]",
+  "home.about.quote.source": "[Alıntı Kaynağı]'ndan",
+
+  "home.contribute.title": "Arşive Katkıda Bulunun",
+  "home.contribute.description": "Şeyh [İsim] ile ilgili materyalleri, çevirileri veya anıları paylaşarak bu koleksiyonu korumamıza ve genişletmemize yardımcı olun.",
+  "home.contribute.button": "Bizimle İletişime Geçin",
+
+  "footer.siteTitle": "Şeyh Mirası",
+  "footer.tagline": "Şeyh [İsim]'in bilgeliğini ve katkılarını korumaya ve paylaşmaya adanmıştır.",
+  "footer.copyright": "Şeyh Mirası Projesi. Tüm hakları saklıdır.",
+
+  "footer.explore.title": "Keşfet",
+  "footer.explore.home": "Ana Sayfa",
+  "footer.explore.biography": "Biyografi",
+  "footer.explore.books": "Kitaplar",
+  "footer.explore.lessons": "Dersler",
+  "footer.explore.poems": "Şiirler",
+
+  "footer.connect.title": "Bağlantı",
+  "footer.connect.contact": "İletişim",
+
+  "back-to-home": "Ana Sayfaya Geçin",
+  "biography.timeline": "Tarih Zamanı",
+
+  "books.title": "Kitaplar",
+  "books.description": "Teoloji, maneviyat ve İslam hukuku üzerine kapsamlı eserler.",
+  "books.bookNotFoundPDF": "Kitabın PDF dosyası bulunamadı",
+  "books.bookRead": "Kitabı Oku ve Yükle"
+}
