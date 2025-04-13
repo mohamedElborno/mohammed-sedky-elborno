@@ -10,8 +10,8 @@ export default function Footer() {
           <p
             className={`text-center text-sm text-muted-foreground md:text-left`}
           >
-            &copy; {new Date().getFullYear()}{" "}
-            {intl.formatMessage({ id: "footer.copyright" })}
+            &copy; {new Date().getFullYear()}
+            {" | " + intl.formatMessage({ id: "footer.copyright" })}
           </p>
         </div>
       </div>
