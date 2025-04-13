@@ -18,9 +18,18 @@ export const HomePage = ({
   const homePageInfo = homePage;
   const intl = useIntl();
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen relative overflow-x-hidden">
+      <Image
+        src="/olive1.svg"
+        alt="test"
+        width={400}
+        height={400}
+        className={`overflow-hidden dark:invert z-0 absolute opacity-10 md:opacity-20 top-20  ${
+          isRtl ? "-left-1 scale-x-[-1]" : "-right-1 scale-x-[1]"
+        }`}
+      />
       <main className="flex-1">
-        <section className="flex h-full items-center justify-center md:pt-12">
+        <section className="flex h-full items-center justify-center pb-12 md:pb-24">
           <div className="container flex flex-col w-full h-full space-y-8 px-6 md:px-8">
             <div className="flex flex-col gap-4 md:gap-10 mt-12">
               <div className={isRtl ? "" : " max-w-[1000px]"}>
@@ -62,7 +71,16 @@ export const HomePage = ({
             />
           </div>
         </section>
-        <section className="w-full py-12 md:py-24">
+        <section className="w-full py-12 md:py-24 dark:bg-muted/30 bg-muted/60 relative">
+          <Image
+            src="/olive2.svg"
+            alt="test"
+            width={400}
+            height={400}
+            className={`overflow-hidden dark:invert z-0 absolute opacity-10 md:opacity-20 top-20  ${
+              isRtl ? "-right-4 scale-x-[-1]" : "-left-4 scale-x-[1]"
+            }`}
+          />
           <div className="container space-y-12 px-4 md:px-8">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div
@@ -109,7 +127,7 @@ export const HomePage = ({
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+        <section className="w-full py-12 md:py-24 lg:py-32 dark:bg-muted/40 bg-muted/90">
           <div className="container px-5 md:px-8">
             <div className="grid gap-10 md:gap-16 lg:grid-cols-2">
               <div className="space-y-4">

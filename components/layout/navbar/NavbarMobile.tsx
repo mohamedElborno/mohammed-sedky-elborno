@@ -11,7 +11,7 @@ export const NavbarMobile = ({
 }) => {
   return (
     <div
-      className={`${!boolean ? "h-0 translation-all duration-300" : "md:hidden translation-all duration-300 top-16 h-64 w-full z-50 flex flex-col items-center justify-center mx-auto mt-2"}`}
+      className={`${!boolean ? "h-0 translation-all duration-300" : "md:hidden translation-all duration-300 top-16 h-40 w-full z-50 flex flex-col items-center justify-center mx-auto mt-2"}`}
     >
       <ul
         className={`${!boolean ? "absolute opacity-0" : "md:hidden flex opacity-100 flex-col items-center gap-4 delay-150 duration-200"}`}

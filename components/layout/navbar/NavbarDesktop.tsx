@@ -30,7 +30,10 @@ export const NavbarDesktop = ({
         <ul className="flex items-center gap-8">
           {navbarData.map(
             (item: { link: string; title: string }, index: number) => (
-              <li className="hover:text-secondary duration-100" key={index}>
+              <li
+                className="hover:text-zinc-600 transition duration-100"
+                key={index}
+              >
                 <Link href={item.link}>{item.title}</Link>
               </li>
             )

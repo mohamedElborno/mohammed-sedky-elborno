@@ -136,3 +136,21 @@
 ul:lang(ar) {
   list-style-position: inside;
 }
+
+@media (min-width: 380px) {
+  .xs-flex-row {
+    flex-direction: row;
+  }
+  .xs-space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+  .xs-mx-4 {
+    margin-left: 1rem /* 16px */;
+    margin-right: 1rem /* 16px */;
+  }
+  .xs-w-fit {
+    width: fit-content;
+  }
+}

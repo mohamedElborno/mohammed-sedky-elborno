@@ -39,7 +39,7 @@ export const LessonsPage = ({
             alt={lessonsPage?.title}
             width={6000}
             height={6000}
-            className="h-auto w-full hover:drop-shadow transition-all duration-300 rounded-t-3xl"
+            className="h-auto w-full hover:drop-shadow transition-all duration-300 rounded-3xl"
           />
         </Link>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 md:pt-8">

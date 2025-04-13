@@ -54,7 +54,7 @@ export default async function RootLayout({
   const intl = await getIntl(locale);
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body>
+      <body className="overflow-x-hidden">
         <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
           <LayoutClient locale={locale}>{children}</LayoutClient>
         </ServerIntlProvider>
