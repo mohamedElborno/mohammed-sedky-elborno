@@ -12,15 +12,32 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [ariaLabel, setAriaLabel] = React.useState("تغيير الثيم"); // Initial static value
+
+  React.useEffect(() => {
+    const getThemeLabel = () => {
+      switch (theme) {
+        case "light":
+          return "تغيير الثيم إلى الوضع الداكن";
+        case "dark":
+          return "تغيير الثيم إلى الوضع الفاتح";
+        case "system":
+          return "تغيير الثيم إلى وضع النظام";
+        default:
+          return "تغيير الثيم";
+      }
+    };
+    setAriaLabel(getThemeLabel());
+  }, [theme]);
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" aria-label={ariaLabel}>
           <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-125 transition-all dark:-rotate-90 dark:scale-0" />
           <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-125" />
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">{ariaLabel}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="center">

@@ -21,7 +21,7 @@ export const HomePage = ({
     <div className="flex flex-col min-h-screen relative overflow-x-hidden">
       <Image
         src="/olive1.svg"
-        alt="test"
+        alt="olive1"
         width={400}
         height={400}
         className={`overflow-hidden dark:invert z-0 absolute opacity-10 md:opacity-20 top-20  ${
@@ -74,7 +74,7 @@ export const HomePage = ({
         <section className="w-full py-12 md:py-24 dark:bg-muted/30 bg-muted/60 relative">
           <Image
             src="/olive2.svg"
-            alt="test"
+            alt="olive2"
             width={400}
             height={400}
             className={`overflow-hidden dark:invert z-0 absolute opacity-10 md:opacity-20 top-20  ${

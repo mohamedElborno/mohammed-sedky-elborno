@@ -39,7 +39,17 @@ export default function LanguageChanger() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild value={currentLocale}>
-        <Button variant="ghost" size="icon">
+        <Button
+          variant="ghost"
+          size="icon"
+          aria-label={
+            currentLocale === "ar"
+              ? "تغيير اللغة إلى العربية"
+              : currentLocale === "tr"
+                ? "Dili Türkçe'ye Değiştir"
+                : "تغيير اللغة"
+          }
+        >
           <Languages className="scale-125" />
         </Button>
       </DropdownMenuTrigger>
@@ -51,13 +61,6 @@ export default function LanguageChanger() {
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
-      {/*       <select onChange={handleChange} value={currentLocale}>
-        {i18nConfig.locales.map((locale) => (
-          <option key={locale} value={locale}>
-            {locale}
-          </option>
-        ))}
-      </select> */}
     </DropdownMenu>
   );
 }

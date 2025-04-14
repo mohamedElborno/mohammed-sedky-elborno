@@ -41,7 +41,7 @@ export const BiographyPage = ({
         alt="test"
         width={600}
         height={600}
-        className={`overflow-hidden hidden lg:block dark:invert z-0 absolute opacity-10 md:opacity-20 bottom-56 ${
+        className={`overflow-hidden hidden w-auto h-auto lg:block dark:invert z-0 absolute opacity-10 md:opacity-20 bottom-56 ${
           isRtl
             ? "-right-8 rotate-[9deg]"
             : "-left-8 -scale-x-[1] -rotate-[9deg]"
@@ -159,16 +159,6 @@ export const BiographyPage = ({
                 ))}
               </div>
             </div>
-            {/*       <div className="rounded-lg border p-4 space-y-4 ">
-            <h3 className="font-semibold">Notable Teachers</h3>
-            <Separator />
-            <ul className="space-y-2 text-sm">
-              <li>Sheikh [Teacher Name 1]</li>
-              <li>Sheikh [Teacher Name 2]</li>
-              <li>Sheikh [Teacher Name 3]</li>
-              <li>Sheikh [Teacher Name 4]</li>
-            </ul>
-          </div> */}
           </div>
         </div>
       </div>
