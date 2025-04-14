@@ -48,7 +48,7 @@ export const HomePage = ({
                 <div className="flex flex-col w-fit xs-w-full xs-flex-row mt-4 space-y-2 xs-space-y-0 -mb-2 sm:mb-0">
                   <Link
                     href={`/${locale}/biography`}
-                    className="flex h-9 w-fit items-center justify-center rounded-md bg-primary px-4 py-2 text-md font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="z-10 flex h-9 w-fit items-center justify-center rounded-md bg-primary px-4 py-2 text-md font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   >
                     {homePageInfo?.primaryButton}
                     {!isRtl && <ArrowRight className="ms-2 h-4 w-4" />}
@@ -58,7 +58,7 @@ export const HomePage = ({
                   </Link>
                   <Link
                     href={`/${locale}/books`}
-                    className="flex h-9 xs-mx-4 w-full xs-w-fit items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-md font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+                    className="z-10 flex h-9 xs-mx-4 w-full xs-w-fit items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-md font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                   >
                     {homePageInfo?.secondaryButton}
                   </Link>
@@ -116,8 +116,15 @@ export const HomePage = ({
                     <p className={`text-lg text-muted-foreground px-2`}>
                       {item?.description}
                     </p>
-                    <Link href={`/${locale}/${item?.workUrl}`} className="mt-2">
-                      <Button variant="outline" size="sm">
+                    <Link
+                      href={`/${locale}/${item?.workUrl}`}
+                      className="mt-2 w-fit"
+                    >
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="cursor-pointer"
+                      >
                         {homePageInfo?.worksButton}
                       </Button>
                     </Link>
@@ -139,7 +146,7 @@ export const HomePage = ({
                 </p>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
                   <Link href={`/${locale}/biography`}>
-                    <Button variant="outline">
+                    <Button variant="outline" className="cursor-pointer">
                       {homePageInfo?.fullAboutButton}
                     </Button>
                   </Link>

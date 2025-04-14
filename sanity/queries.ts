@@ -74,7 +74,7 @@ export async function getBiography(locale: string) {
 }
 export async function getBooks(locale: string) {
   const query = `
-    *[_type == "books"] {
+    *[_type == "books"] | order(order asc) {
       _id,
       "title": title["${locale}"],
       "description": description["${locale}"],

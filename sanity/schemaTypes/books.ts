@@ -23,6 +23,7 @@ export const books = defineType({
       title: "رابط الكتاب",
       type: "url",
     },
+    { name: "order", type: "number", title: "Display Order" },
     {
       name: "description",
       title: "وصف الكتاب",
