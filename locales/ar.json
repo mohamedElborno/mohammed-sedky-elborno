@@ -1,6 +1,14 @@
 {
   "metadata.title": "تراث الشيخ",
   "metadata.description": "أرشيف رقمي لحياة وكتب ومعلقات شيخ ومعلم ووالد عظيم.",
+  "metadata.title.biography": "سيرة الشيخ",
+  "metadata.description.biography": "سيرة وعلم الشيخ محمد صدقي البورنو.",
+
+  "metadata.title.books": "كتب الشيخ",
+  "metadata.description.books": "اكتشف كتب العلامة الدكتور محمد صدقي البورنو في أصول الفقه، الشيخ الجليل الذي ترك بصمة واضحة في هذا العلم من خلال مؤلفاته القيمة والمؤثرة",
+
+  "metadata.title.media": "مقاطع الشيخ",
+  "metadata.description.media": "بوابة للمقاطع المرئية التي تشمل سلاسل علمية ونصوصًا شعرية مسجلة للشيخ محمد صدقي البورنو",
 
   "navigation.siteTitle": "تراث الشيخ",
   "navigation.home": "الرئيسية",

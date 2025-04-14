@@ -33,7 +33,7 @@ export async function generateMetadata({
       siteName: intl.formatMessage({ id: "metadata.title" }),
       images: [
         {
-          url: "/metadata.svg",
+          url: "https://mohammed-sedky-elborno.vercel.app/metaGraph.svg",
           width: 1200,
           height: 630,
           alt: intl.formatMessage({ id: "metadata.description" }),

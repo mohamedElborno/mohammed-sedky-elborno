@@ -2,6 +2,15 @@
   "metadata.title": "Şeyh Mirası",
   "metadata.description": "Saygıdeğer bir alim ve manevi rehberin hayatı, öğretileri ve edebi katkılarının dijital arşivi.",
 
+  "metadata.title.biography": "Biyografi",
+  "metadata.description.biography": "Şeyh Muhammed Sidki EL-Borno'nun Hayatı ve İlmi",
+
+  "metadata.title.books": "Şeyh Kitapları",
+  "metadata.description.books": "Allame Doktor Muhammed Sidki EL-Borno'nun Usûl-i Fıkıh Alanındaki Eserlerini Keşfedin: Bu ilimde değerli ve etkili eserleriyle belirgin bir iz bırakan Celil Şeyh",
+
+  "metadata.title.media": "Şeyh'in Videoları",
+  "metadata.description.media": "Şeyh Muhammed Sidki EL-Borno'nun Bilimsel Silsilelerini ve Kaydedilmiş Şiir Metinlerini İçeren Video Portalı",
+
   "navigation.siteTitle": "Şeyh Mirası",
   "navigation.home": "Ana Sayfa",
   "navigation.biography": "Biyografi",

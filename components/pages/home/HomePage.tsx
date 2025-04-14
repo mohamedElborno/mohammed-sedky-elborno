@@ -27,6 +27,8 @@ export const HomePage = ({
         className={`overflow-hidden dark:invert z-0 absolute opacity-10 md:opacity-20 top-20  ${
           isRtl ? "-left-1 scale-x-[-1]" : "-right-1 scale-x-[1]"
         }`}
+        priority
+        loading="eager"
       />
       <main className="flex-1">
         <section className="flex h-full items-center justify-center pb-12 md:pb-24">
