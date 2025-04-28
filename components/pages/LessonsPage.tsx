@@ -44,14 +44,14 @@ export const LessonsPage = ({
         </Link>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 pt-6 md:pt-8">
           {lessonsPage?.lessons?.map((lesson: LessonType, index: number) => (
-            <Link href={`${lesson?.url}`} key={index}>
+            <Link href={`${lesson?.url}`} key={index} target="_blank">
               <Card className="overflow-hidden h-full flex flex-col dark:hover:bg-zinc-800 duration-300 hover:bg-zinc-100">
                 <Image
                   src={lesson?.image || "/placeholder.svg?height=400&width=300"}
-                  height={5000}
-                  width={5000}
+                  height={500}
+                  width={500}
                   alt={lesson?.title}
-                  className="w-full h-auto rounded-xl p-2 -translate-y-5"
+                  className="w-full object-cover h-44 rounded-xl p-2 -translate-y-5"
                 />
 
                 <div className="p-4 py-0 -translate-y-5">

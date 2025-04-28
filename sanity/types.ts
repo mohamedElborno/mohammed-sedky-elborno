@@ -29,7 +29,7 @@ export interface HomePageType {
   aboutTitle: string;
   aboutBrief: string;
   fullAboutButton: string;
-  quote: string;
+  quote: TypedObject | TypedObject[];
   quoteSource: string;
   authorName: string;
   contactTitle: string;

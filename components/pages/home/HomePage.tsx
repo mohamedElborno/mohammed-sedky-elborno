@@ -6,7 +6,8 @@ import Image from "next/image";
 import YouTubeModal from "./YouTubeModal";
 import { useIntl } from "react-intl";
 import { HomePageType, WorkCategory } from "@/sanity/types";
-
+import { PortableText } from "@portabletext/react";
+import { PortableTextComponents } from "@/components/BlockStyle";
 export const HomePage = ({
   locale,
   homePage,
@@ -156,8 +157,13 @@ export const HomePage = ({
               </div>
               <div className="space-y-4">
                 <blockquote className={`text-xl italic border-s-4 ps-4 py-3`}>
-                  {homePageInfo?.quote ||
-                    intl.formatMessage({ id: "home.about.quote.text" })}
+                  <PortableText
+                    components={PortableTextComponents}
+                    value={
+                      homePageInfo?.quote ||
+                      intl.formatMessage({ id: "home.about.quote.text" })
+                    }
+                  />
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <User className="h-12 w-12 rounded-full bg-muted p-2" />

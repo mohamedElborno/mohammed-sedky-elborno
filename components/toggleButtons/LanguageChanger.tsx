@@ -12,6 +12,12 @@ import {
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { Languages } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 export default function LanguageChanger() {
   const router = useRouter();
@@ -57,7 +63,21 @@ export default function LanguageChanger() {
         {i18nConfig.locales.map((locale) => (
           <DropdownMenuItem key={locale} onClick={() => handleChange(locale)}>
             {locale === "ar" ? "العربية" : ""}
-            {locale === "tr" ? "Türkçe" : ""}
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  {locale === "tr" && (
+                    <div className="flex items-center gap-2">Türkçe</div>
+                  )}
+                </TooltipTrigger>
+                <TooltipContent
+                  side="bottom"
+                  className="mt-1 bg-popover text-popover-foreground border"
+                >
+                  <p>Çeviri yapay zeka ile yapılmıştır.</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

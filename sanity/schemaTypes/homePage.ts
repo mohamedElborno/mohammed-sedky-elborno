@@ -124,7 +124,7 @@ export const homePage = defineType({
     {
       name: "quote",
       title: "اقتباس",
-      type: "localeText",
+      type: "localeBlock",
     },
     {
       name: "quoteSource",
