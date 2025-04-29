@@ -1,3 +1,4 @@
+// لتاريخ الميلاد والوفاة (تاريخ مفصل)
 export const formatLocalizedDate = (
   dateString: string,
   locale: "ar" | "tr"
@@ -39,4 +40,9 @@ export const formatLocalizedDate = (
 
   const monthName = months[locale][date.getMonth()];
   return `${day} ${monthName} ${year}`;
+};
+
+export const formatYearOnly = (dateString: string) => {
+  const date = new Date(dateString);
+  return `${date.getFullYear()}`;
 };

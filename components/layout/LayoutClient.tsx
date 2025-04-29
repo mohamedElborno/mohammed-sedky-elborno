@@ -6,6 +6,8 @@ import { Amiri, Luxurious_Roman, Roboto, Cairo } from "next/font/google";
 import { usePathname } from "next/navigation";
 import Footer from "./footer/Footer";
 import Navbar from "./navbar/Navbar";
+import { ScrollToTop } from "./scroll-to-top";
+import LoadingIndicator from "./Loading";
 
 const amiri = Amiri({
   subsets: ["arabic"],
@@ -37,7 +39,7 @@ export default function LayoutClient({
 }) {
   const pathName = usePathname();
   const isStudioPage = pathName.startsWith("/studio");
-
+  const isRtl = locale === "tr";
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
@@ -62,12 +64,14 @@ export default function LayoutClient({
           {children}
         </ThemeProvider>
       ) : (
-        <div className="mt-20">
+        <div className="mt-20 min-h-screen">
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
             {children}
             <Footer />
+            <LoadingIndicator />
           </ThemeProvider>
+          <ScrollToTop isRtl={isRtl} />
         </div>
       )}
     </div>

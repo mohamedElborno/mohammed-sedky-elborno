@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import YouTubeModal from "./YouTubeModal";
@@ -166,7 +166,7 @@ export const HomePage = ({
                   />
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <User className="h-12 w-12 rounded-full bg-muted p-2" />
+                  {/*<User className="h-12 w-12 rounded-full bg-muted p-2" /> */}
                   <div>
                     <div className={`font-semibold`}>
                       {homePageInfo?.authorName ||
@@ -196,8 +196,8 @@ export const HomePage = ({
                 </p>
               </div>
               <div className="mx-auto w-full max-w-sm space-y-2">
-                <Link href="mailto:elborno.family@gmail.com?subject=استفسار&body=السلام عليكم">
-                  <Button className="w-full">
+                <Link href="mailto:elborno.family@gmail.com?subject=استفسار&body=السلام عليكم ورحمة الله وبركاته">
+                  <Button className="w-full cursor-pointer">
                     {homePageInfo?.contactButton}
                   </Button>
                 </Link>
