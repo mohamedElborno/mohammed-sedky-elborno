@@ -1,6 +1,10 @@
 // app/sitemap.xml/route.ts
 import { NextResponse } from "next/server";
 
+async function getLastModified(page: string): Promise<string> {
+  return new Date().toISOString().split("T")[0];
+}
+
 export async function GET() {
   const baseUrl = "https://mohammed-sedky-elborno.vercel.app";
 
@@ -12,33 +16,25 @@ export async function GET() {
   const pages = ["", "/biography", "/books", "/media"];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
->
-${locales
-  .map(({ prefix }) =>
-    pages
-      .map((page) => {
-        const loc = `${baseUrl}${prefix}${page}`;
-        const alternates = locales
-          .map(
-            ({ code, prefix: p }) =>
-              `<xhtml:link rel="alternate" hreflang="${code}" href="${baseUrl}${p}${page}" />`
-          )
-          .join("\n      ");
-
-        return `
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+${await Promise.all(
+  locales.map(
+    async ({ prefix }) =>
+      await Promise.all(
+        pages.map(async (page) => {
+          const loc = `${baseUrl}${prefix}${page}`;
+          const lastmod = await getLastModified(page);
+          return `
   <url>
     <loc>${loc}</loc>
-    ${alternates}
+    <lastmod>${lastmod}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>`;
-      })
-      .join("")
+        })
+      ).then((urls) => urls.join(""))
   )
-  .join("")}
+).then((sections) => sections.join(""))}
 </urlset>`;
 
   return new NextResponse(sitemap, {
