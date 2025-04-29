@@ -17,7 +17,7 @@ export async function GET() {
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
 ${locales
-  .map(({ code: _, prefix }) =>
+  .map(({ prefix }) =>
     pages
       .map((page) => {
         const loc = `${baseUrl}${prefix}${page}`;
