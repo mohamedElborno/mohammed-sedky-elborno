@@ -1,7 +1,7 @@
 // app/sitemap.xml/route.ts
 import { NextResponse } from "next/server";
 
-async function getLastModified(page: string): Promise<string> {
+async function getLastModified(): Promise<string> {
   return new Date().toISOString().split("T")[0];
 }
 
@@ -23,7 +23,7 @@ ${await Promise.all(
       await Promise.all(
         pages.map(async (page) => {
           const loc = `${baseUrl}${prefix}${page}`;
-          const lastmod = await getLastModified(page);
+          const lastmod = await getLastModified();
           return `
   <url>
     <loc>${loc}</loc>
