@@ -27,6 +27,9 @@ export async function generateMetadata({
     icons: {
       icon: "/logo.svg",
     },
+    other: {
+      "google-site-verification": "s0Dj8N7kfJLX9pG",
+    },
     openGraph: {
       title: intl.formatMessage({ id: "metadata.title" }),
       description: intl.formatMessage({ id: "metadata.description" }),
@@ -54,6 +57,23 @@ export default async function RootLayout({
   const intl = await getIntl(locale);
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "محمد صدقي البورنو",
+              description: "شيخ ومعلم وفقيه",
+              sameAs: [
+                "https://mohammed-sedky-elborno.vercel.app/metadata.svg",
+                "https://www.youtube.com/@MohammedSidqiAlborno",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className="overflow-x-hidden">
         <ServerIntlProvider messages={intl.messages} locale={intl.locale}>
           <LayoutClient locale={locale}>{children}</LayoutClient>
