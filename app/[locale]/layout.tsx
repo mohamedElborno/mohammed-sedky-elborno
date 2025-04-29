@@ -28,7 +28,7 @@ export async function generateMetadata({
       icon: "/logo.svg",
     },
     other: {
-      "google-site-verification": "s0Dj8N7kfJLX9pG",
+      "google-site-verification": "s0Dj8N7kfJLX9pGqhwkhmUP87lw9aKCWqXtXZCDbGIE",
     },
     openGraph: {
       title: intl.formatMessage({ id: "metadata.title" }),
