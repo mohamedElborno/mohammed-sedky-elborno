@@ -8,7 +8,6 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { useIntl } from "react-intl";
@@ -52,14 +51,14 @@ export const BooksPage = ({
                   }
                   height={400}
                   width={300}
-                  alt="Book cover"
+                  alt={`غلاف كتاب ${book?.title}`}
                   className="w-full h-[400px] p-4 py-0 rounded-2xl"
                 />
 
                 <CardHeader className="p-4 py-0">
-                  <CardTitle className="line-clamp-3 leading-relaxed">
+                  <h2 className="text-lg font-semibold leading-relaxed line-clamp-3">
                     {book?.title}
-                  </CardTitle>
+                  </h2>
                 </CardHeader>
 
                 <CardDescription className="p-4 py-0">
@@ -71,8 +70,15 @@ export const BooksPage = ({
                 <div className="mt-auto">
                   <CardFooter className="flex justify-between p-4 py-0">
                     {book?.url ? (
-                      <Link href={book?.url} target="_blank">
-                        <Button className="rounded-lg cursor-pointer">
+                      <Link
+                        href={book?.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button
+                          aria-label={`تحميل كتاب ${book?.title}`}
+                          className="rounded-lg cursor-pointer"
+                        >
                           {intl.formatMessage({ id: "books.bookRead" })}
                         </Button>
                       </Link>

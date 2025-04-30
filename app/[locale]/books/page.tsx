@@ -17,6 +17,7 @@ export async function generateMetadata({
     metadataBase: new URL("https://mohammed-sedky-elborno.vercel.app"),
     title: intl.formatMessage({ id: "metadata.title.books" }),
     description: intl.formatMessage({ id: "metadata.description.books" }),
+    keywords: intl.formatMessage({ id: "metadata.keywords.books" }),
     icons: {
       icon: "/logo.svg",
     },

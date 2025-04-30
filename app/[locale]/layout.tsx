@@ -36,7 +36,7 @@ export async function generateMetadata({
       siteName: intl.formatMessage({ id: "metadata.title" }),
       images: [
         {
-          url: "https://mohammed-sedky-elborno.vercel.app/metaGraph.svg",
+          url: "https://mohammed-sedky-elborno.vercel.app/photoGraph.png",
           width: 1200,
           height: 630,
           alt: intl.formatMessage({ id: "metadata.description" }),
@@ -67,7 +67,7 @@ export default async function RootLayout({
               name: "محمد صدقي البورنو",
               description: "شيخ ومعلم وفقيه",
               sameAs: [
-                "https://mohammed-sedky-elborno.vercel.app/metadata.svg",
+                "https://mohammed-sedky-elborno.vercel.app/photoGraph.png",
                 "https://www.youtube.com/@MohammedSidqiAlborno",
               ],
             }),
